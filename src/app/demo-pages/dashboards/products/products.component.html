@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="header">Seleccione algún producto</div>
+    <div class="grid">
+        <div class="row">
+            <div class="col-sm-3 item" *ngFor="let item of products;">
+                <div class="card" style="width: 18rem;"><img class="card-img-top"
+                        src="{{item.src}}"
+                        alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">{{item.title}}</h5>
+                        <p class="card-text">{{item.description}}</p><a class="btn btn-primary">{{item.link}}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
