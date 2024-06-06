@@ -13,4 +13,7 @@ export class UserBoxComponent implements OnInit {
   ngOnInit() {
   }
 
+  verCarrito() {
+
+  }
 }

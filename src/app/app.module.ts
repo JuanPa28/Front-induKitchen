@@ -81,7 +81,14 @@ import {ChartBoxes3Component} from './demo-pages/widgets/chart-boxes3/chart-boxe
 
 import {ControlsComponent} from './demo-pages/forms/Elements/controls/controls.component';
 import {LayoutComponent} from './demo-pages/forms/Elements/layout/layout.component';
-import { ProductsComponent } from './demo-pages/dashboards/products/products.component';
+import { ProductosComponent } from './demo-pages/dashboards/productos/productos.component';
+import {DataViewModule} from "primeng/dataview";
+import {DropdownModule} from "primeng/dropdown";
+import {RatingModule} from "primeng/rating";
+import {ButtonModule} from "primeng/button";
+import {InputTextModule} from "primeng/inputtext";
+import {BadgeModule} from "primeng/badge";
+import {TooltipModule} from "primeng/tooltip";
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
@@ -117,7 +124,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     // Dashboards
 
     AnalyticsComponent,
-    ProductsComponent,
+    ProductosComponent,
 
     // User Pages
 
@@ -159,22 +166,29 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     LayoutComponent,
 
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    CommonModule,
-    LoadingBarRouterModule,
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        CommonModule,
+        LoadingBarRouterModule,
 
-    // Angular Bootstrap Components
+        // Angular Bootstrap Components
 
-    PerfectScrollbarModule,
-    NgbModule,
-    FontAwesomeModule,
-    FormsModule,
-    ReactiveFormsModule,
-    HttpClientModule,
-  ],
+        PerfectScrollbarModule,
+        NgbModule,
+        FontAwesomeModule,
+        FormsModule,
+        ReactiveFormsModule,
+        HttpClientModule,
+        DataViewModule,
+        DropdownModule,
+        RatingModule,
+        ButtonModule,
+        InputTextModule,
+        BadgeModule,
+        TooltipModule,
+    ],
   providers: [
   ],
   bootstrap: [AppComponent]

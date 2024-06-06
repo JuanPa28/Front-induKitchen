@@ -47,7 +47,7 @@ import {ChartBoxes3Component} from './demo-pages/widgets/chart-boxes3/chart-boxe
 
 import {ControlsComponent} from './demo-pages/forms/Elements/controls/controls.component';
 import {LayoutComponent} from './demo-pages/forms/Elements/layout/layout.component';
-import { ProductsComponent } from './demo-pages/dashboards/products/products.component';
+import { ProductosComponent } from './demo-pages/dashboards/productos/productos.component';
 
 
 
@@ -60,7 +60,7 @@ const routes: Routes = [
       // Dashboads
 
       {path: '', component: AnalyticsComponent, data: {extraParameter: 'dashboardsMenu'}},
-      {path: 'products', component: ProductsComponent, data: {extraParameter: 'dashboardsMenu'}},
+      {path: 'productos', component: ProductosComponent, data: {extraParameter: 'dashboardsMenu'}},
 
       // Elements
 
