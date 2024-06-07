@@ -2,7 +2,7 @@
   <div class="page-title-wrapper">
     <div class="page-title-heading">
       <div class="page-title-icon">
-        <i class="icon {{icon}}"></i>
+          <fa-icon [icon]="faCashRegister" class="me-2"></fa-icon>
       </div>
       <div>
         {{heading}}
@@ -13,13 +13,7 @@
       </div>
     </div>
     <div class="page-title-actions">
-      <button type="button" class="btn-shadow me-3 btn btn-dark">
-        <fa-icon [icon]="faStar"></fa-icon>
-      </button>
-      <button type="button" class="btn-shadow d-inline-flex align-items-center btn btn-success">
-        <fa-icon [icon]="faPlus" class="me-2"></fa-icon>
-        Create New
-      </button>
+        <p-button label="Vaciar carrito" icon="pi pi-trash" styleClass="p-button-warning"  (onClick)="vaciarCarrito()" badgeClass="p-badge-danger"></p-button>
     </div>
   </div>
 </div>

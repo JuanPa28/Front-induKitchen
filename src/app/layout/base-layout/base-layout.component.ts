@@ -1,45 +1,46 @@
 import {Component} from '@angular/core';
 import {ThemeOptions} from '../../theme-options';
 import {animate, query, style, transition, trigger} from '@angular/animations';
+import {MessageService} from "primeng/api";
 
 @Component({
-  selector: 'app-base-layout',
-  templateUrl: './base-layout.component.html',
-  animations: [
+    selector: 'app-base-layout',
+    templateUrl: './base-layout.component.html',
+    animations: [
 
-    trigger('architectUIAnimation', [
-      transition('* <=> *', [
-        query(':enter, :leave', [
-          style({
-            opacity: 0,
-            display: 'flex',
-            flex: '1',
-            transform: 'translateY(-20px)',
-            flexDirection: 'column'
+        trigger('architectUIAnimation', [
+            transition('* <=> *', [
+                query(':enter, :leave', [
+                    style({
+                        opacity: 0,
+                        display: 'flex',
+                        flex: '1',
+                        transform: 'translateY(-20px)',
+                        flexDirection: 'column'
 
-          }),
-        ]),
-        query(':enter', [
-          animate('200ms ease', style({opacity: 1, transform: 'translateY(0)'})),
-        ]),
+                    }),
+                ]),
+                query(':enter', [
+                    animate('200ms ease', style({opacity: 1, transform: 'translateY(0)'})),
+                ]),
 
-        query(':leave', [
-          animate('200ms ease', style({opacity: 0, transform: 'translateY(-20px)'})),
-         ], { optional: true })
-      ]),
-    ])
-  ]
+                query(':leave', [
+                    animate('200ms ease', style({opacity: 0, transform: 'translateY(-20px)'})),
+                ], {optional: true})
+            ]),
+        ])
+    ]
 })
 
 export class BaseLayoutComponent {
 
 
-  constructor(public globals: ThemeOptions) {
-  }
+    constructor(public globals: ThemeOptions) {
+    }
 
-  toggleSidebarMobile() {
-    this.globals.toggleSidebarMobile = !this.globals.toggleSidebarMobile;
-  }
+    toggleSidebarMobile() {
+        this.globals.toggleSidebarMobile = !this.globals.toggleSidebarMobile;
+    }
 }
 
 

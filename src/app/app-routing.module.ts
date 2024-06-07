@@ -48,6 +48,7 @@ import {ChartBoxes3Component} from './demo-pages/widgets/chart-boxes3/chart-boxe
 import {ControlsComponent} from './demo-pages/forms/Elements/controls/controls.component';
 import {LayoutComponent} from './demo-pages/forms/Elements/layout/layout.component';
 import { ProductosComponent } from './demo-pages/dashboards/productos/productos.component';
+import {CarritoComponent} from "./demo-pages/dashboards/carrito/carrito.component";
 
 
 
@@ -61,6 +62,7 @@ const routes: Routes = [
 
       {path: '', component: AnalyticsComponent, data: {extraParameter: 'dashboardsMenu'}},
       {path: 'productos', component: ProductosComponent, data: {extraParameter: 'dashboardsMenu'}},
+      {path: 'carrito', component: CarritoComponent, data: {extraParameter: 'dashboardsMenu'}},
 
       // Elements
 

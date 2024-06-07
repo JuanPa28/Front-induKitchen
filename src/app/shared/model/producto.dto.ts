@@ -1,9 +1,10 @@
 export interface ProductoDto {
-    id: string;
+    id: string,
     nombre: string,
     descripcion: string,
     precio: number,
     existencia: number,
     peso: number,
-    imagen: string
+    imagen: string,
+    cantidadEnCarrito:number;
 }

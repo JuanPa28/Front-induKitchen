@@ -14,7 +14,7 @@ import {AppComponent} from './app.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {PerfectScrollbarModule} from 'ngx-perfect-scrollbar';
 import {PerfectScrollbarConfigInterface} from 'ngx-perfect-scrollbar';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 
 // LAYOUT
 
@@ -45,7 +45,9 @@ import {AnalyticsComponent} from './demo-pages/dashboards/analytics/analytics.co
 
 // Pages
 
-import {ForgotPasswordBoxedComponent} from './demo-pages/user-pages/forgot-password-boxed/forgot-password-boxed.component';
+import {
+    ForgotPasswordBoxedComponent
+} from './demo-pages/user-pages/forgot-password-boxed/forgot-password-boxed.component';
 import {LoginBoxedComponent} from './demo-pages/user-pages/login-boxed/login-boxed.component';
 import {RegisterBoxedComponent} from './demo-pages/user-pages/register-boxed/register-boxed.component';
 
@@ -81,7 +83,7 @@ import {ChartBoxes3Component} from './demo-pages/widgets/chart-boxes3/chart-boxe
 
 import {ControlsComponent} from './demo-pages/forms/Elements/controls/controls.component';
 import {LayoutComponent} from './demo-pages/forms/Elements/layout/layout.component';
-import { ProductosComponent } from './demo-pages/dashboards/productos/productos.component';
+import {ProductosComponent} from './demo-pages/dashboards/productos/productos.component';
 import {DataViewModule} from "primeng/dataview";
 import {DropdownModule} from "primeng/dropdown";
 import {RatingModule} from "primeng/rating";
@@ -89,83 +91,88 @@ import {ButtonModule} from "primeng/button";
 import {InputTextModule} from "primeng/inputtext";
 import {BadgeModule} from "primeng/badge";
 import {TooltipModule} from "primeng/tooltip";
+import {TagModule} from "primeng/tag";
+import {CarritoComponent} from "./demo-pages/dashboards/carrito/carrito.component";
+import {ToastModule} from "primeng/toast";
+import {MessageService} from "primeng/api";
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
-  suppressScrollX: true
+    suppressScrollX: true
 };
 
 @NgModule({
-  declarations: [
+    declarations: [
 
-    // LAYOUT
+        // LAYOUT
 
-    AppComponent,
-    BaseLayoutComponent,
-    PagesLayoutComponent,
-    PageTitleComponent,
+        AppComponent,
+        BaseLayoutComponent,
+        PagesLayoutComponent,
+        PageTitleComponent,
 
-    // HEADER
+        // HEADER
 
-    HeaderComponent,
-    SearchBoxComponent,
-    UserBoxComponent,
+        HeaderComponent,
+        SearchBoxComponent,
+        UserBoxComponent,
 
-    // SIDEBAR
+        // SIDEBAR
 
-    SidebarComponent,
-    LogoComponent,
+        SidebarComponent,
+        LogoComponent,
 
-    // FOOTER
+        // FOOTER
 
-    FooterComponent,
+        FooterComponent,
 
-    // DEMO PAGES
+        // DEMO PAGES
 
-    // Dashboards
+        // Dashboards
 
-    AnalyticsComponent,
-    ProductosComponent,
+        AnalyticsComponent,
+        ProductosComponent,
+        CarritoComponent,
 
-    // User Pages
+        // User Pages
 
-    ForgotPasswordBoxedComponent,
-    LoginBoxedComponent,
-    RegisterBoxedComponent,
+        ForgotPasswordBoxedComponent,
+        LoginBoxedComponent,
+        RegisterBoxedComponent,
 
-    // Elements
+        // Elements
 
-    StandardComponent,
-    IconsComponent,
-    DropdownsComponent,
-    CardsComponent,
-    ListGroupsComponent,
-    TimelineComponent,
+        StandardComponent,
+        IconsComponent,
+        DropdownsComponent,
+        CardsComponent,
+        ListGroupsComponent,
+        TimelineComponent,
 
-    // Components
+        // Components
 
-    AccordionsComponent,
-    TabsComponent,
-    CarouselComponent,
-    ModalsComponent,
-    ProgressBarComponent,
-    PaginationComponent,
-    TooltipsPopoversComponent,
+        AccordionsComponent,
+        TabsComponent,
+        CarouselComponent,
+        ModalsComponent,
+        ProgressBarComponent,
+        PaginationComponent,
+        TooltipsPopoversComponent,
 
-    // Tables
+        // Tables
 
-    RegularComponent,
-    TablesMainComponent,
+        RegularComponent,
+        TablesMainComponent,
 
-    // Dashboard Boxes
+        // Dashboard Boxes
 
-    ChartBoxes3Component,
+        ChartBoxes3Component,
 
-    // Form Elements
+        // Form Elements
 
-    ControlsComponent,
-    LayoutComponent,
+        ControlsComponent,
+        LayoutComponent,
 
-  ],
+    ],
     imports: [
         BrowserModule,
         AppRoutingModule,
@@ -188,10 +195,11 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
         InputTextModule,
         BadgeModule,
         TooltipModule,
+        TagModule,
+        ToastModule,
     ],
-  providers: [
-  ],
-  bootstrap: [AppComponent]
+    providers: [MessageService],
+    bootstrap: [AppComponent]
 })
 
 export class AppModule {

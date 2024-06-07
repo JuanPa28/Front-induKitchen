@@ -1,0 +1,80 @@
+<app-page-title [heading]="heading" [subheading]="subheading" [icon]="icon"></app-page-title>
+<div class="row">
+    <div class="col-md-6">
+        <div class="main-card mb-3 card">
+            <div class="card-body"><h5 class="card-title">Datos del cliente</h5>
+                <form [formGroup]="frmCarrito" (submit)="AlmacenarCarrito()">
+                    <div class="position-relative mb-3">
+                        <label for="cedula" class="form-label">Cédula</label>
+                        <input name="cedula" formControlName="cedula" id="cedula" placeholder="Cédula"
+                               class="form-control">
+                        <span class="text-danger"
+                              *ngIf="(frmCarritoControls.cedula.touched || submitted) && frmCarritoControls.cedula.errors?.required">
+                                La cédula es requerida
+                            </span>
+                    </div>
+
+                    <div class="position-relative mb-3">
+                        <label for="nombre" class="form-label">Nombre</label>
+                        <input name="nombre" formControlName="nombre" id="nombre" placeholder="Nombre"
+                               class="form-control">
+                        <span class="text-danger"
+                              *ngIf="(frmCarritoControls.nombre.touched || submitted) && frmCarritoControls.nombre.errors?.required">
+                                El nombre es requerido
+                            </span>
+                    </div>
+                    <div class="position-relative mb-3">
+                        <label for="direccion" class="form-label">Dirección</label>
+                        <input name="direccion" formControlName="direccion" id="direccion" placeholder="Dirección"
+                               class="form-control">
+                        <span class="text-danger"
+                              *ngIf="(frmCarritoControls.direccion.touched || submitted) && frmCarritoControls.direccion.errors?.required">
+                                La direccion es requerida
+                            </span>
+                    </div>
+                    <div class="position-relative mb-3">
+                        <label for="exampleEmail" class="form-label">Email</label>
+                        <input name="email" formControlName="correo" id="exampleEmail" placeholder="Email" type="email"
+                               class="form-control">
+                        <span class="text-danger"
+                              *ngIf="(frmCarritoControls.correo.touched || submitted) && frmCarritoControls.correo.errors?.required">
+                                El correo es requerido
+                            </span>
+                    </div>
+                    <div class="position-relative mb-3">
+                        <label for="telefono" class="form-label">Teléfono</label>
+                        <input name="telefono" formControlName="telefono" id="telefono" placeholder="Teléfono"
+                               class="form-control">
+                        <span class="text-danger"
+                              *ngIf="(frmCarritoControls.telefono.touched || submitted) && frmCarritoControls.telefono.errors?.required">
+                                El telefono es requerido
+                            </span>
+                    </div>
+                    <button type="submit" class="mt-1 btn btn-primary">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--div class="col-md-6">
+        <div class="main-card mb-3 card">
+            <div class="card-body">
+                <h5 class="card-title">Sizing</h5>
+                <form>
+                    <input placeholder="lg" type="text" class="mb-2 form-control-lg form-control">
+                    <input placeholder="default" type="text" class="mb-2 form-control">
+                    <input placeholder="sm" type="text" class="mb-2 form-control-sm form-control">
+                    <div class="divider"></div>
+                    <select class="mb-2 form-control-lg form-select">
+                        <option>Large Select</option>
+                    </select>
+                    <select class="mb-2 form-select">
+                        <option>Default Select</option>
+                    </select>
+                    <select class="form-control-sm form-select">
+                        <option>Small Select</option>
+                    </select>
+                </form>
+            </div>
+        </div>
+    </div-->
+</div>

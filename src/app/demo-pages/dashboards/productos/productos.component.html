@@ -28,10 +28,14 @@
                     </div>
                     <div class="product-grid-item-bottom">
                         <span class="product-price">${{producto.precio}}</span>
-                        <p-button icon="pi pi-shopping-cart" [disabled]="producto.existencia === 0"  pTooltip="Agregar al carrito"></p-button>
+                        <p-button icon="pi pi-shopping-cart" [disabled]="producto.existencia === 0" (onClick)="agregarAlCarrito(producto)" pTooltip="Agregar al carrito"></p-button>
+                    </div>
+                    <div *ngIf="producto.cantidadEnCarrito">
+                        <p-tag styleClass="mr-2" icon="pi pi-shopping-cart" severity="success" value="Agregado ({{producto.cantidadEnCarrito}})"></p-tag>
                     </div>
                 </div>
             </div>
         </ng-template>
     </p-dataView>
 </div>
+<p-toast></p-toast>
