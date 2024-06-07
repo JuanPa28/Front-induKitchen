@@ -30,17 +30,17 @@ export class CarritoComponent implements OnInit {
 
     ngOnInit() {
         this.frmCarrito = this.fb.group({
-            cedula: new FormControl('123', [
+            cedula: new FormControl('', [
                 Validators.required]),
-            nombre: new FormControl('jose lopez', [
+            nombre: new FormControl('', [
                 Validators.required]),
-            direccion: new FormControl('carrera', [
+            direccion: new FormControl('', [
                 Validators.required]),
-            correo: new FormControl('josei.lopez.velez@gmail.com', [
+            correo: new FormControl('', [
                 Validators.required,
                 Validators.email
             ]),
-            telefono: new FormControl('123', [
+            telefono: new FormControl('', [
                 Validators.required]),
         })
     }
